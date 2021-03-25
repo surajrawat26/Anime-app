@@ -1,19 +1,12 @@
-/* eslint-disable react/jsx-no-target-blank */
-/* eslint-disable array-callback-return */
-/* eslint-disable jsx-a11y/anchor-has-content */
-import React from 'react';
 import { CardColumns } from 'react-bootstrap';
 import Card from 'react-bootstrap/Card'
-
-
-
-const HomeSection = ({topAnime}) => {
+const Airing = ({airingAnime}) => {
     return ( 
-       <div className="top-stats">
-           <h3>Top Anime</h3>
-				{topAnime.map(anime => (
+             <div className="top-stats">
+         <h3>Airing Anime</h3>
+            {airingAnime.map(anime => (
 
-					<CardColumns className="container-card" key={anime.mal_id} target="_blank">
+                <CardColumns className="container-card" key={anime.mal_id} target="_blank">
 					<Card>
 						<Card.Img variant="top" src={anime.image_url} />
     				<Card.Body>
@@ -35,10 +28,12 @@ const HomeSection = ({topAnime}) => {
 					
 					
 					</CardColumns>
-					
-				))}
-       </div>
+
+            )
+
+            )}
+        </div>
      );
 }
  
-export default HomeSection;
+export default Airing;
